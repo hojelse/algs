@@ -5,13 +5,16 @@ struct Flow {
   ll V, E, S, T, M;
   vector<Edge> es;
   mi g;
-  Flow(ll V, ll E, ll S, ll T) : V(V), E(E), S(S), T(T), g(V), M(0) {}
-  void add_edge(ll u, ll v, ll c) {
+  Flow(ll V, ll S, ll T)
+    : V(V), S(S), T(T), M(0), g(V) {}
+  ll add_edge(ll u, ll v, ll c) {
     M = max(M, c);
+    ll id = es.size();
     es.push_back(Edge{u, v, c, 0});
-    g[u].push_back(es.size()-1);
+    g[u].push_back(id);
     es.push_back(Edge{v, u, 0, 0});
-    g[v].push_back(es.size()-1);
+    g[v].push_back(id+1);
+    return id;
   }
   ll augment(ll u, ll b, ll m, vi& seen) {
     if (u == T) return b;
