@@ -1,4 +1,4 @@
-#include "../header.hpp"
+#include "header.hpp"
 
 vi sssp_dijkstra(mii& adj, ll& s) {
   vi distTo;

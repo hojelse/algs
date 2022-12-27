@@ -1,4 +1,3 @@
-#include "../header.hpp"
 #include "dijkstra.cpp"
 // Test on https://open.kattis.com/problems/shortestpath1
 int main(void) {

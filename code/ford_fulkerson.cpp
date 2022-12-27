@@ -1,4 +1,4 @@
-#include "../header.hpp"
+#include "header.hpp"
 // Ford Fulkerson with DFS and bottleneck scaling
 struct Edge { ll u, v, c, f; };
 struct Flow {

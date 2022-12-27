@@ -1,4 +1,4 @@
-#include "../header.hpp"
+#include "header.hpp"
 // Assumes A is sorted
 ll binary_search(vector<ll>& A, ll x) {
   ll lo = 0;

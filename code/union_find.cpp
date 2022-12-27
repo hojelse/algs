@@ -1,4 +1,4 @@
-#include "../header.hpp"
+#include "header.hpp"
 // Weighted quick-union with path compression
 struct union_find
 {
