@@ -1,5 +1,7 @@
+/* 
+  Union-Find - Weighted quick-union with path-compression
+ */
 #include "header.hpp"
-// Weighted quick-union with path compression
 struct union_find
 {
   const int N;

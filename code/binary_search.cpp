@@ -1,5 +1,9 @@
+/*
+  Binary search
+  time O(log2 N)
+  Assumes A is sorted
+*/
 #include "header.hpp"
-// Assumes A is sorted
 ll binary_search(vector<ll>& A, ll x) {
   ll lo = 0;
   ll hi = A.size()-1;

@@ -1,5 +1,9 @@
+/*
+  Dijkstra - Single Source Shorest Paths
+  time O(E log V)
+  space O(V)
+*/
 #include "header.hpp"
-
 vi sssp_dijkstra(mii& adj, ll& s) {
   vi distTo;
   priority_queue<ii, vii, greater<ii> > pq;

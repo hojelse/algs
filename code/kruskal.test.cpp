@@ -1,5 +1,5 @@
-#include "kruskal.cpp"
 // Test on https://itu.kattis.com/problems/minspantree
+#include "kruskal.cpp"
 bool cmp_by_u_then_v(const Edge& a, const Edge& b) {
   if (a.u == b.u) return a.v < b.v;
   return a.u < b.u;

@@ -1,5 +1,5 @@
-#include "union_find.cpp"
 // Test on https://itu.kattis.com/problems/itu.disjointsets
+#include "union_find.cpp"
 int main() {
   int n, m;
   cin >> n >> m;

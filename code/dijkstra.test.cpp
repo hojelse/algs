@@ -1,5 +1,5 @@
-#include "dijkstra.cpp"
 // Test on https://open.kattis.com/problems/shortestpath1
+#include "dijkstra.cpp"
 int main(void) {
   ll n, m, q, s;
   while (true)

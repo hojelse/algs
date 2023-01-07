@@ -1,3 +1,8 @@
+/*
+  Kruskal's Algorithm - Minimum Spanning Tree
+  time O(E log E)
+  space O(E)
+*/
 #include "header.hpp"
 #include "union_find.cpp"
 struct Edge { ll u, v, w; };

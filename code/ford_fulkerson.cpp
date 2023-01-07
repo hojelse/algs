@@ -1,5 +1,8 @@
+/*
+  Scaling Max-Flow - Ford Fulkerson with DFS and bottleneck scaling
+  time: O(m^2 log C), where C is sum of capacities out of source
+*/
 #include "header.hpp"
-// Ford Fulkerson with DFS and bottleneck scaling
 struct Edge { ll u, v, c, f; };
 struct Flow {
   ll V, E, S, T, M;

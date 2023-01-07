@@ -1,5 +1,5 @@
-#include "ford_fulkerson.cpp"
 // Test on https://open.kattis.com/problems/maxflow
+#include "ford_fulkerson.cpp"
 int main() {
   ll n, m, s, t;
   cin >> n >> m >> s >> t;
