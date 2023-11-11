@@ -1,17 +1,16 @@
-/*
-  Binary search
-  time O(log2 N)
-  Assumes A is sorted
-*/
 #include "header.hpp"
-ll binary_search(vector<ll>& A, ll x) {
+// Binary search return index for exact floor and ceil
+// Assumes A is sorted
+struct res {ll exact; ll floor; ll ceil;};
+res binary_search(vi& A, ll x) {
+	ll n = A.size();
 	ll lo = 0;
-	ll hi = A.size()-1;
+	ll hi = n-1;
 	while (lo <= hi) {
 		ll mid = (lo+hi)/2;
-		if (A[mid] == x) return mid;
+		if (A[mid] == x) return (struct res){mid, mid, mid};
 		if (A[mid] > x) hi = mid-1;
-		else lo = mid+1;
-	}
-	return -1;
+		else lo = mid+1; }
+	return (struct res){-1, hi, (lo<n)?lo:-1};
 }
+// Example: auto [i, f, c] = binary_search(A, x);
