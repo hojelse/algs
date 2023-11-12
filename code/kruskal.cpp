@@ -1,8 +1,5 @@
-/*
-  Kruskal's Algorithm - Minimum Spanning Tree
-  time O(E log E)
-  space O(E)
-*/
+// Kruskal - MINIMUM SPANNING TREE
+// O(E log E) time O(E) space
 #include "header.hpp"
 #include "union_find.cpp"
 struct Edge { ll u, v, w; };
@@ -13,10 +10,7 @@ struct UndirectedEdgeWeigtedGraph {
 		: V(V), g(V) {}
 	void add_edge(ll u, ll v, ll w) {
 		g[u].push_back(Edge{u, v, w});
-		g[u].push_back(Edge{v, u, w});
-	}
-};
-
+		g[u].push_back(Edge{v, u, w}); }};
 ll kruskal(UndirectedEdgeWeigtedGraph& G, vector<Edge>& mst, ll& W) {
 	if (G.V==1) return true;
 	vector<Edge> es;
@@ -30,7 +24,5 @@ ll kruskal(UndirectedEdgeWeigtedGraph& G, vector<Edge>& mst, ll& W) {
 		if (uf.find(edge.u) == uf.find(edge.v)) continue;
 		uf.uni(edge.u, edge.v);
 		mst.push_back(edge);
-		W += edge.w;
-	}
-	return false;
-}
+		W += edge.w; }
+	return false; }

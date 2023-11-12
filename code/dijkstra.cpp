@@ -1,19 +1,13 @@
-/*
-  Dijkstra - Single Source Shorest Paths
-  time O(E log V)
-  space O(V)
-*/
+// Dijkstra - SINGLE SOURCE SHORTEST PATHS
+// O(E log V) time O(V) space
 #include "header.hpp"
 vi sssp_dijkstra(mii &adj, ll &s) {
 	vi distTo;
 	priority_queue<ii, vii, greater<ii>> pq;
-
 	for (ll i = 0; i < adj.size(); i++)
 		distTo.push_back(inf);
-
 	pq.push(ii{0, s});
 	distTo[s] = 0;
-
 	while (!pq.empty()) {
 		auto [prio, v1] = pq.top();
 		pq.pop();
@@ -24,9 +18,5 @@ vi sssp_dijkstra(mii &adj, ll &s) {
 				continue;
 			if (distTo[v2] > distTo[v1] + w) {
 				distTo[v2] = distTo[v1] + w;
-				pq.push(ii{distTo[v2], v2});
-			}
-		}
-	}
-	return distTo;
-}
+				pq.push(ii{distTo[v2], v2}); }}}
+	return distTo; }
