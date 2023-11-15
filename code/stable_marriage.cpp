@@ -2,8 +2,6 @@
 // terminates after at most n^2 iterations of the While
 // Assumes: 2 equal sized sets, full ranking, no ties
 #include "header.hpp"
-#include <queue>
-#include <map>
 struct stable_marriage {
 	ll N;
 	mi proposers_rank_rejectors;
